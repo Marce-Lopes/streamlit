@@ -1,0 +1,19 @@
+# Streamlit App Requirements
+
+# Core
+streamlit>=1.28.0
+pandas>=2.0.0
+python-dateutil>=2.8.2
+
+# Excel handling
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# SharePoint integration
+Office365-REST-Python-Client>=2.5.0
+
+# Optional: Better performance
+watchdog>=3.0.0  # For auto-reload
+
+# Note: Backend dependencies (backend.py and utils/) are already in the project
+
