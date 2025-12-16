@@ -17,7 +17,7 @@ class SharePointBackend:
     def __init__(self):
         self.site_url = "https://gwmglobal.sharepoint.com/sites/DataAnalytics"
         self.client_id = "6c81a342-620c-4614-9398-522af668fcdd"
-        self.client_secret = "2U18Q~~lQ6V.lpmOocSdU7fKRk2Uq1fX5ouX6chb"
+        self.client_secret = ${{secrets.sharepoint_secret}}
         self.remote_file_url = "Shared Documents/5.Information Registry/KPISystem.xlsx"
         self.local_file_name = "../KPISystem.xlsx"
 
@@ -465,6 +465,7 @@ class SharePointBackend:
         ctx.web.get_folder_by_server_relative_url("Shared Documents/5.Information Registry") \
             .upload_file("KPISystem.xlsx", output.read()) \
             .execute_query()
+
 
 
 backend = SharePointBackend()
